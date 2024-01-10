@@ -1,13 +1,11 @@
-from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://app.db'
-db = SQLAlchemy(app)
+db = SQLAlchemy()
 
 
 class Post(db.model):
-    id = db.Column(db.Integer, primary_key=True)
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String(80), nullable=False)
     content = db.Column(db.String(255), nullable=False)
 
