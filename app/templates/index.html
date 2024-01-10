@@ -1,12 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <a href="/post">posts</a>
-  </body>
-</html>
+{% extends "./base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1>HOME</h1>
+<div>
+  <a href="post/index">posts</a>
+</div>
+{% endblock %}
